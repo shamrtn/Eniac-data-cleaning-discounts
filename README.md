@@ -7,7 +7,7 @@ Eniac, a premium Apple reseller, faced a strategic deadlock between high-volume 
 **📊 Dataset & Sources**
 *   **Source:** Integrated CSV datasets (Orders, Orderlines, Products, Brands).
 *   **Size:** ~[Insert Number] orders spanning 2017 to 2018.
-*   **Key Features:** `check_orders`, `price`, `unit_price`, `discount_percentage`, `order_date`, and `product_category`.
+*   **Key Features:** `order_id`, `price`, `unit_price`, `discount`, `date`,`unit_price_paid`,`type` and `product_category`.
 *   **Preprocessing:** Filtered for "Completed" orders and removed outliers/mouldy data. Merged disparate tables to calculate the exact discount per line item. Categorized products into "Anchors" (iPhones/Macs) and "Accessories" to identify price elasticity.
 
 **🚀 Key Findings & Results**
@@ -23,5 +23,34 @@ Eniac, a premium Apple reseller, faced a strategic deadlock between high-volume 
 
 *   📁**Project Structure**
   
-![Eniac_evolution of discount](01_Eniac_Discount_evolution.png)
+![Eniac_evolution of discount](PNG/01_Eniac_Discount_evolution.png)
 * Irregular discount throughout the year
+
+![Eniac_evolution of revenue](PNG/02_Eniac_Basket_evolution.png)
+* Only peak in July above average
+
+![Eniac_evolution of order](PNG/03_Eniac_Order_evolution.png)
+* Following seasonality rather than discount setting
+
+![Eniac_evolution of revenue](PNG/03_Eniac_Revenue_evolution.png)
+* Following seasonality rather than discount setting
+
+**Final recommendations:**
+- Remove all discounts
+- Offer a 5% discount for New Customers via Newletters (and gather Leads)
+- Run A/B testings for topsellers to measure "Are sales driven by tag or price"
+- Offer Tiered Pricing during Black Friday/Christmas or Summer Sales
+  - Guarantee a high AOV
+  - Saves margins for cheaper products
+
+ 
+**Additional Reflections**
+- **The corrupted data**: During Quality Assessment, a _chunk_ of the tables were dropped as their values were odd (filled with mistakes, not following a similar pattern, not clear enough)
+
+- **The "Data Blind Spot"**: One major takeaway was the impact of missing data. Analyzing discounting efficiency without COGS and CAC is like "navigating with half a map." My analysis shifted from a definitive financial audit to a strategic risk assessment, highlighting the urgent need for cross-departmental data transparency.
+
+- **The Psychology of Discounting**: I realized that "Price Training" is a real risk for premium brands. By constantly varying discount percentages, Eniac may have conditioned its most loyal customers to wait for a "drop" rather than buying based on need or quality. The pivot to a 5% Newsletter Lead isn't just a financial move; it's a brand-rehabilitation move.
+
+- **The Seasonality Trap**: This project reinforced the importance of using Time-Series Analysis to isolate "organic growth" from "bought growth."
+
+- **The Conflict of Interests**: This project was a lesson in stakeholder management. I had to find a "Middle Ground" that satisfied Marketing’s need for leads and the Board’s need for margins. Data served as the objective mediator in a subjective corporate debate.
