@@ -26,13 +26,13 @@ Eniac, a premium Apple reseller, faced a strategic deadlock between high-volume 
 ![Eniac_evolution of discount](PNG/01_Eniac_Discount_evolution.png)
 * Irregular discount throughout the year
 
-![Eniac_evolution of revenue](PNG/02_Eniac_Basket_evolution.png)
+![Eniac_evolution of basket](PNG/02_Eniac_Basket_size.png)
 * Only peak in July above average
 
 ![Eniac_evolution of order](PNG/03_Eniac_Order_evolution.png)
 * Following seasonality rather than discount setting
 
-![Eniac_evolution of revenue](PNG/03_Eniac_Revenue_evolution.png)
+![Eniac_evolution of revenue](PNG/04_Eniac_Revenue_evolution.png)
 * Following seasonality rather than discount setting
 
 **Final recommendations:**
