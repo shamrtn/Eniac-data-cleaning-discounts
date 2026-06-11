@@ -6,9 +6,9 @@ Eniac, a premium Apple reseller, faced a strategic deadlock between high-volume 
 
 **📊 Dataset & Sources**
 *   **Source:** Integrated CSV datasets (Orders, Orderlines, Products, Brands).
-*   **Size:** ~[Insert Number] orders spanning 2017 to 2018.
+*   **Size:** ~200 000 orders spanning 2017 to 2018.
 *   **Key Features:** `order_id`, `price`, `unit_price`, `discount`, `date`,`unit_price_paid`,`type` and `product_category`.
-*   **Preprocessing:** Filtered for "Completed" orders and removed outliers/mouldy data. Merged disparate tables to calculate the exact discount per line item. Categorized products into "Anchors" (iPhones/Macs) and "Accessories" to identify price elasticity.
+*   **Preprocessing:** Filtered for "Completed" orders and removed outliers/corrupted data. Merged disparate tables to calculate the exact discount per line item. Categorized products into "Anchors" (iPhones/Macs) and "Accessories" to identify price elasticity.
 
 **🚀 Key Findings & Results**
 *   **The Seasonality Illusion:** Analysis revealed that Q4 2017 and Q1 2018 growth was driven by market cycles (Black Friday/New Year), not the depth of discounts. Sales volume remained high even when discounts were minimal.
@@ -35,17 +35,14 @@ Eniac, a premium Apple reseller, faced a strategic deadlock between high-volume 
 ![Eniac_evolution of revenue](PNG/04_Eniac_Revenue_evolution.png)
 * Following seasonality rather than discount setting
 
-**Final recommendations:**
-- Remove all discounts
-- Offer a 5% discount for New Customers via Newletters (and gather Leads)
-- Run A/B testings for topsellers to measure "Are sales driven by tag or price"
-- Offer Tiered Pricing during Black Friday/Christmas or Summer Sales
-  - Guarantee a high AOV
-  - Saves margins for cheaper products
+### 🎯 Strategic Recommendations
+* **Implement the 5% Newsletter Lead:** Transition away from flat discounts to a 5% "Welcome" discount to secure consumer emails for low-cost remarketing.
+* **Launch A/B Price Elasticity Testing:** Test top-selling products to determine if demand is truly driven by price cuts or premium brand perception.
+* **Shift to Tiered Seasonal Pricing:** Restrict discounting to high-volume events (Black Friday/Christmas) with strict minimum spend thresholds to safeguard margins and guarantee a higher Average Order Value (AOV).
 
  
 **Additional Reflections**
-- **The corrupted data**: During Quality Assessment, a _chunk_ of the tables were dropped as their values were odd (filled with mistakes, not following a similar pattern, not clear enough)
+- **The corrupted data**: During Quality Assessment, a _chunk_ of the tables were dropped during the Quality Assessment phase due to structural anomalies, missing critical keys, and unresolvable tracking inconsistencies.
 
 - **The "Data Blind Spot"**: One major takeaway was the impact of missing data. Analyzing discounting efficiency without COGS and CAC is like "navigating with half a map." My analysis shifted from a definitive financial audit to a strategic risk assessment, highlighting the urgent need for cross-departmental data transparency.
 
